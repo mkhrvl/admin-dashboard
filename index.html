@@ -5,11 +5,54 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Admin Dashboard</title>
         <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
     </head>
     <body>
         <header class="header"></header>
 
-        <aside class="sidebar"></aside>
+        <aside class="sidebar">
+            <div class="branding">
+                <img class="branding__icon" src="images/ic-dashboard.svg" alt="Dashboard Icon" />
+                <h1 class="branding__text">Dashboard</h1>
+            </div>
+
+            <nav>
+                <div class="nav__primary">
+                    <img class="nav__icon" src="images/ic-home.svg" alt="Home Link Icon" />
+                    <a class="nav__link" href="#">Home</a>
+
+                    <img class="nav__icon" src="images/ic-profile.svg" alt="Profile Link Icon" />
+                    <a class="nav__link" href="#">Profile</a>
+
+                    <img class="nav__icon" src="images/ic-messages.svg" alt="Messages Link Icon" />
+                    <a class="nav__link" href="#">Messages</a>
+
+                    <img class="nav__icon" src="images/ic-history.svg" alt="History Link Icon" />
+                    <a class="nav__link" href="#">History</a>
+
+                    <img class="nav__icon" src="images/ic-tasks.svg" alt="Tasks Link Icon" />
+                    <a class="nav__link" href="#">Tasks</a>
+
+                    <img class="nav__icon" src="images/ic-communities.svg" alt="Communities Link Icon" />
+                    <a class="nav__link" href="#">Communities</a>
+                </div>
+                <div class="nav__misc">
+                    <img class="nav__icon" src="images/ic-settings.svg" alt="Settings Link Icon" />
+                    <a class="nav__link" href="#">Settings</a>
+
+                    <img class="nav__icon" src="images/ic-support.svg" alt="Support Link Icon" />
+                    <a class="nav__link" href="#">Support</a>
+
+                    <img class="nav__icon" src="images/ic-privacy.svg" alt="Privacy Link Icon" />
+                    <a class="nav__link" href="#">Privacy</a>
+                </div>
+            </nav>
+        </aside>
 
         <main class="main-content"></main>
     </body>

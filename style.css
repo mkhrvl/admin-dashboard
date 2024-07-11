@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 /*
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
@@ -54,14 +56,18 @@ h6 {
     --clr-gray: #e2e8f0;
 
     --clr-box-shadow: rgba(0, 0, 0, 0.2);
+
+    --w-ic-branding: 42px;
+    --w-ic-nav: 24px;
 }
 
 body {
     display: grid;
+    font-family: 'Roboto', sans-serif;
     grid-template-areas:
         'sidebar header'
         'sidebar main';
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: minmax(220px, 1fr) 6fr;
     grid-template-rows: 1fr 5fr;
     height: 100svh;
 }
@@ -76,6 +82,58 @@ body {
 .sidebar {
     background-color: var(--clr-blue);
     grid-area: sidebar;
+    padding: 1rem;
+}
+
+.branding,
+.nav__primary,
+.nav__misc {
+    align-items: center;
+    display: grid;
+    column-gap: 0.5rem;
+    grid-template-columns: var(--w-ic-branding) 1fr;
+}
+
+.branding {
+    margin-bottom: 3rem;
+}
+
+.branding__icon {
+    min-width: var(--w-ic-branding);
+}
+
+.branding__text {
+    color: var(--clr-white);
+}
+
+.branding__icon,
+.nav__icon {
+    aspect-ratio: 1 / 1;
+    /* Change svg color from black to white 
+     Note: svg has to be black for this to work */
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(228deg) brightness(102%) contrast(102%);
+}
+
+.nav__primary,
+.nav__misc {
+    row-gap: 1rem;
+}
+
+.nav__primary {
+    margin-bottom: 3rem;
+}
+
+.nav__icon {
+    width: var(--w-ic-nav);
+    min-width: var(--w-ic-nav);
+    justify-self: center;
+}
+
+.nav__link {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--clr-white);
 }
 
 .main-content {
