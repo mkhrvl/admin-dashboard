@@ -77,6 +77,94 @@ body {
     box-shadow: 0px 3px 8px var(--clr-box-shadow);
     grid-area: header;
     z-index: 1;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 1rem 3rem;
+    column-gap: 3rem;
+    row-gap: 2rem;
+}
+
+.user-profile__notification,
+.search__icon {
+    width: var(--w-ic-nav);
+    min-width: var(--w-ic-nav);
+}
+
+.search {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: 1rem;
+    align-items: center;
+}
+
+.search__bar {
+    background-color: var(--clr-gray);
+    border: none;
+    border-radius: 1em;
+    padding: 0.1rem 1rem;
+}
+
+.search__bar:focus {
+    outline: 1px solid black;
+}
+
+.user-profile {
+    justify-content: end;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    gap: 1.5rem;
+    margin-right: 1rem;
+}
+
+.user-profile__img {
+    width: var(--w-ic-branding);
+    border-radius: 50%;
+}
+
+.user-profile__name {
+    font-weight: bold;
+}
+
+.user-info {
+    justify-content: start;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1rem;
+    align-items: center;
+    font-weight: bold;
+}
+
+.user-info__img {
+    width: 64px;
+    min-width: 64px;
+    border-radius: 50%;
+}
+
+.user-info__greeting {
+    font-size: 0.8rem;
+}
+
+.user-info__name {
+    font-size: 1.4rem;
+}
+
+.action-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: 2.5rem;
+    align-items: stretch;
+    justify-content: end;
+    align-self: center;
+    gap: 1.5rem;
+}
+
+.action-buttons > button {
+    background-color: var(--clr-blue);
+    border-radius: 2rem;
+    border: none;
+    color: var(--clr-white);
+    font-weight: bold;
 }
 
 .sidebar {
