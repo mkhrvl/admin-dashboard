@@ -321,13 +321,13 @@ body {
     grid-area: announce;
 }
 
-.announce__container {
+.announce__card {
     padding: 2rem;
     display: grid;
     gap: 1em;
 }
 
-.announce__container hr {
+.announce__card hr {
     border: 1px solid var(--clr-gray);
 }
 
