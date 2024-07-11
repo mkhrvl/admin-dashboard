@@ -120,7 +120,8 @@ body {
     margin-right: 1rem;
 }
 
-.user-profile__img {
+.user-profile__img,
+.trending__img {
     width: var(--w-ic-branding);
     border-radius: 50%;
 }
@@ -324,7 +325,7 @@ body {
 .announce__card {
     padding: 2rem;
     display: grid;
-    gap: 1em;
+    gap: 1rem;
 }
 
 .announce__card hr {
@@ -346,4 +347,31 @@ body {
 
 .trending {
     grid-area: trending;
+}
+
+.trending__card {
+    padding: 2rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.trending__project {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-template-rows: auto auto;
+    column-gap: 1rem;
+}
+
+.trending__username {
+    text-decoration: none;
+    color: inherit;
+}
+
+.trending__username,
+.trending__title {
+    font-size: 0.9rem;
+}
+
+.trending__link {
+    grid-row: span 2;
 }
