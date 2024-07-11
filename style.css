@@ -54,11 +54,14 @@ h6 {
     --clr-white: #ffffff;
     --clr-blue: #1992d4;
     --clr-gray: #e2e8f0;
-
+    --clr-dark-gray: #636363;
+    --clr-yellow: #f0b429;
     --clr-box-shadow: rgba(0, 0, 0, 0.2);
 
     --w-ic-branding: 42px;
     --w-ic-nav: 24px;
+
+    --br-card: 8px;
 }
 
 body {
@@ -227,4 +230,97 @@ body {
 .main-content {
     background-color: var(--clr-gray);
     grid-area: main;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        'project announcements'
+        'project trending';
+    padding-top: 2rem;
+    padding-left: 1.5rem;
+    padding-bottom: 3.5rem;
+    padding-right: 2rem;
+    column-gap: 1.5rem;
+    row-gap: 2rem;
+}
+
+.main-content h2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.main-content p {
+    color: var(--clr-dark-gray);
+}
+
+.card {
+    background-color: var(--clr-white);
+    border-radius: var(--br-card);
+    box-shadow: 2px 2px 5px var(--clr-box-shadow);
+}
+
+.project {
+    grid-area: project;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.project__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 1.5rem;
+}
+
+.project__card {
+    position: relative;
+    padding: 2rem;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.project__card::before {
+    content: '';
+    background-color: var(--clr-yellow);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 8px;
+    height: 100%;
+    border-top-left-radius: var(--br-card);
+    border-bottom-left-radius: var(--br-card);
+}
+
+.project__desc {
+    margin-bottom: 1rem;
+}
+
+.project__buttons {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: end;
+    gap: 1.5rem;
+}
+
+.project__buttons button {
+    background-color: var(--clr-white);
+    border: none;
+    padding: 0;
+}
+
+.project__buttons img {
+    width: var(--w-ic-nav);
+    min-width: var(--w-ic-nav);
+    /* Change svg color from black to #333333 */
+    /* Note: svg has to be black for this to work */
+    filter: invert(17%) sepia(0%) saturate(0%) hue-rotate(236deg) brightness(87%) contrast(86%);
+}
+
+.announcements {
+    grid-area: announcements;
+}
+
+.trending {
+    grid-area: trending;
 }
